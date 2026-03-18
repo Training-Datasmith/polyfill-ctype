@@ -26,10 +26,8 @@ final class Ctype
      * @see https://php.net/ctype-alnum
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_alnum($text)
+    public static function ctype_alnum($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -42,10 +40,8 @@ final class Ctype
      * @see https://php.net/ctype-alpha
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_alpha($text)
+    public static function ctype_alpha($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -58,10 +54,8 @@ final class Ctype
      * @see https://php.net/ctype-cntrl
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_cntrl($text)
+    public static function ctype_cntrl($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -74,10 +68,8 @@ final class Ctype
      * @see https://php.net/ctype-digit
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_digit($text)
+    public static function ctype_digit($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -90,10 +82,8 @@ final class Ctype
      * @see https://php.net/ctype-graph
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_graph($text)
+    public static function ctype_graph($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -106,10 +96,8 @@ final class Ctype
      * @see https://php.net/ctype-lower
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_lower($text)
+    public static function ctype_lower($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -122,10 +110,8 @@ final class Ctype
      * @see https://php.net/ctype-print
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_print($text)
+    public static function ctype_print($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -138,10 +124,8 @@ final class Ctype
      * @see https://php.net/ctype-punct
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_punct($text)
+    public static function ctype_punct($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -154,10 +138,8 @@ final class Ctype
      * @see https://php.net/ctype-space
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_space($text)
+    public static function ctype_space($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -170,10 +152,8 @@ final class Ctype
      * @see https://php.net/ctype-upper
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_upper($text)
+    public static function ctype_upper($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -186,10 +166,8 @@ final class Ctype
      * @see https://php.net/ctype-xdigit
      *
      * @param mixed $text
-     *
-     * @return bool
      */
-    public static function ctype_xdigit($text)
+    public static function ctype_xdigit($text): bool
     {
         $text = self::convert_int_to_char_for_ctype($text, __FUNCTION__);
 
@@ -205,11 +183,10 @@ final class Ctype
      * Any other integer is interpreted as a string containing the decimal digits of the integer.
      *
      * @param mixed  $int
-     * @param string $function
      *
      * @return mixed
      */
-    private static function convert_int_to_char_for_ctype($int, $function)
+    private static function convert_int_to_char_for_ctype($int, string $function)
     {
         if (!\is_int($int)) {
             return $int;
