@@ -1,6 +1,4 @@
 /vendor/
 composer.lock
 .phpunit.result.cache
-.docker-static/
-.tmp-bootstrap-probe-*
-.tmp-php-subprocess-*
+.cache/
